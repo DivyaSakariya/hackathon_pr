@@ -1,0 +1,6 @@
+package com.example.hackathon_pr
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
