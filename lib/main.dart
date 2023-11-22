@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_pr/utils/routes_util.dart';
-import 'package:hackathon_pr/views/screens/home_page.dart';
+import 'package:hackathon_pr/views/screens/child_detail_page.dart';
+import 'package:hackathon_pr/views/screens/child_progress_report_page.dart';
 import 'package:hackathon_pr/views/screens/intro_screen.dart';
+import 'package:hackathon_pr/views/screens/settings_page.dart';
 
 void main() {
   runApp(
@@ -16,10 +18,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          useMaterial3: true, colorSchemeSeed: const Color(0xff3D5CFF)),
+        useMaterial3: true,
+        colorSchemeSeed: const Color(0xff3D5CFF),
+      ),
+      initialRoute: MyRoutes.settingsPage,
       routes: {
         MyRoutes.introScreen: (context) => const IntroScreen(),
-        MyRoutes.homePage: (context) => const HomePage(),
+        MyRoutes.childDetailPage: (context) => const ChildDetailPage(),
+        MyRoutes.childProgressReportPage: (context) =>
+            const ChildProgressReportPage(),
+        MyRoutes.settingsPage: (context) => const SettingsPage(),
       },
     );
   }
