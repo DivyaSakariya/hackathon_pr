@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../utils/colors.dart';
 
-class VerificationPage extends StatelessWidget {
-  const VerificationPage({super.key});
+class LetsGetStartedPage extends StatelessWidget {
+  const LetsGetStartedPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,22 +11,34 @@ class VerificationPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          "Verification :",
+          "Lets Get Started",
           style: TextStyle(
             fontSize: 32,
             fontWeight: FontWeight.bold,
             color: MyColors.appTitle,
           ),
         ),
+        actions: [
+          Text(
+            "Skip",
+            style: TextStyle(
+              fontSize: 14,
+              color: MyColors.smallText,
+            ),
+          ),
+        ],
         elevation: 0,
         leading: IconButton(
           onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: Icon(
-            Icons.arrow_back,
-            color: MyColors.btnColor,
-            weight: 1,
+          icon: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(
+              Icons.arrow_back,
+              color: MyColors.btnColor,
+              weight: 1,
+            ),
           ),
         ),
       ),
@@ -35,46 +47,45 @@ class VerificationPage extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "We Sent you a link to Verify\nyour Email Address",
+              "Enter Your Mobile Number for Two\n            Step Verification",
               style: TextStyle(
                 fontSize: 16,
                 color: MyColors.smallText,
               ),
             ),
             const SizedBox(
-              height: 22,
+              height: 48,
             ),
             TextFormField(
               keyboardType: TextInputType.number,
+              maxLength: 10,
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
+                prefixText: "+91 ",
+                prefixStyle: TextStyle(
+                  fontSize: 14,
+                  color: Colors.black,
+                ),
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Text(
-              "Enter the captcha here after resetting your verification",
+              "OR",
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 12,
                 color: MyColors.smallText,
               ),
             ),
             const SizedBox(
-              height: 48,
+              height: 10,
             ),
-            Text(
-              "I did not receive a link",
-              style: TextStyle(
-                fontSize: 16,
-                color: MyColors.smallText,
-              ),
-            ),
-            const SizedBox(
-              height: 48,
-            ),
-            Text(
-              "RESEND",
-              style: TextStyle(
-                fontSize: 18,
-                color: MyColors.btnColor,
+            TextFormField(
+              keyboardType: TextInputType.emailAddress,
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "Email Address",
               ),
             ),
             const Spacer(),

@@ -14,4 +14,6 @@ class ImageUtil {
   static String btnKey = 'key.png';
   static String btnPhone = 'phone.png';
   static String btnStar = 'star.png';
+
+  static String notification = 'notification.png';
 }

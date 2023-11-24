@@ -5,4 +5,7 @@ class MyRoutes {
   static String settingsPage = 'settingsPage';
   static String selectCategoryPage = 'selectCategoryPage';
   static String verificationPage = 'verificationPage';
+  static String letsGetStartedPage = 'letsGetStartedPage';
+  static String otpVerificationPage = 'otpVerificationPage';
+  static String notificationsPage = 'notificationsPage';
 }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../utils/colors.dart';
 
-class VerificationPage extends StatelessWidget {
-  const VerificationPage({super.key});
+class OtpVerificationPage extends StatelessWidget {
+  const OtpVerificationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class VerificationPage extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "We Sent you a link to Verify\nyour Email Address",
+              "We Texted you a code to verify\nyour Phone Number",
               style: TextStyle(
                 fontSize: 16,
                 color: MyColors.smallText,
@@ -44,21 +44,48 @@ class VerificationPage extends StatelessWidget {
             const SizedBox(
               height: 22,
             ),
-            TextFormField(
-              keyboardType: TextInputType.number,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-              ),
-            ),
-            Text(
-              "Enter the captcha here after resetting your verification",
-              style: TextStyle(
-                fontSize: 14,
-                color: MyColors.smallText,
-              ),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 26,
+                ),
+                Expanded(
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 26,
+                ),
+                Expanded(
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 26,
+                ),
+                Expanded(
+                  child: TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 26,
+                ),
+              ],
             ),
             const SizedBox(
-              height: 48,
+              height: 52,
             ),
             Text(
               "I did not receive a link",
@@ -68,7 +95,7 @@ class VerificationPage extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 48,
+              height: 16,
             ),
             Text(
               "RESEND",
