@@ -8,6 +8,7 @@ import 'package:hackathon_pr/views/screens/notifications_page.dart';
 import 'package:hackathon_pr/views/screens/otp_verification_page.dart';
 import 'package:hackathon_pr/views/screens/select_category_page.dart';
 import 'package:hackathon_pr/views/screens/settings_page.dart';
+import 'package:hackathon_pr/views/screens/summary_page.dart';
 import 'package:hackathon_pr/views/screens/verification_page.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: const Color(0xff3D5CFF),
       ),
-      initialRoute: MyRoutes.notificationsPage,
+      initialRoute: MyRoutes.summaryPage,
       routes: {
         MyRoutes.introScreen: (context) => const IntroScreen(),
         MyRoutes.childDetailPage: (context) => const ChildDetailPage(),
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.letsGetStartedPage: (context) => const LetsGetStartedPage(),
         MyRoutes.otpVerificationPage: (context) => const OtpVerificationPage(),
         MyRoutes.notificationsPage: (context) => const NotificationsPage(),
+        MyRoutes.summaryPage: (context) => const SummaryPage(),
       },
     );
   }

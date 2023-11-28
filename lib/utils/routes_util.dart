@@ -8,4 +8,5 @@ class MyRoutes {
   static String letsGetStartedPage = 'letsGetStartedPage';
   static String otpVerificationPage = 'otpVerificationPage';
   static String notificationsPage = 'notificationsPage';
+  static String summaryPage = 'summaryPage';
 }
